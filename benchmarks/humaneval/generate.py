@@ -40,6 +40,10 @@ SYSTEM_PROMPT = (
     "Output ONLY the code continuation, no explanations, no markdown fences, no comments about your approach."
 )
 
+# Standard HumanEval parameters (Chen et al., 2021)
+HUMANEVAL_TEMPERATURE = 0.2
+HUMANEVAL_STOP = ["\nclass", "\ndef", "\n#", "\nif"]
+
 # Global flag for graceful interrupt
 _interrupted = False
 
@@ -207,8 +211,13 @@ def main():
     print(f"Output:         {output_file}")
     print()
 
-    # Create model via DeerFlow factory
-    model = create_chat_model(name=args.model, thinking_enabled=args.thinking)
+    # Create model via DeerFlow factory with standard HumanEval parameters
+    model = create_chat_model(
+        name=args.model,
+        thinking_enabled=args.thinking,
+        temperature=HUMANEVAL_TEMPERATURE,
+        stop=HUMANEVAL_STOP,
+    )
 
     start_time = time.time()
 
