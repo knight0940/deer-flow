@@ -11,12 +11,12 @@ if [ -f "$SCRIPT_DIR/../../.env" ]; then
     set +a
 fi
 
-echo "=== HumanEval Benchmark (DeerFlow harness) ==="
+echo "=== HumanEval Benchmark (DeerFlow Agent) ==="
 echo ""
 
-# Step 1: Generate completions
-echo "[1/2] Generating completions..."
-uv run --directory "$SCRIPT_DIR/../../backend" python "$SCRIPT_DIR/generate.py" --resume "$@"
+# Step 1: Generate completions via DeerFlow agent
+echo "[1/2] Running DeerFlow agent on HumanEval problems..."
+uv run --directory "$SCRIPT_DIR/../../backend" python "$SCRIPT_DIR/generate.py" --resume --cleanup "$@"
 
 # Step 2: Evaluate and generate CSV report
 echo ""
