@@ -1,0 +1,31 @@
+{
+  "stats": {
+    "model": "kimi-for-coding",
+    "provider": "deerflow.models.patched_deepseek:PatchedChatDeepSeek",
+    "thinking": false,
+    "n_problems": 2,
+    "n_samples_per_problem": 1,
+    "total_samples": 2,
+    "errors": 0,
+    "total_input_tokens": 300,
+    "total_output_tokens": 141,
+    "total_tokens": 441,
+    "elapsed_seconds": 4.2
+  },
+  "samples": [
+    {
+      "task_id": "HumanEval/0",
+      "completion": "\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+      "input_tokens": 155,
+      "output_tokens": 47,
+      "error": null
+    },
+    {
+      "task_id": "HumanEval/1",
+      "completion": "\n    paren_string = paren_string.replace(' ', '')\n    result = []\n    current = []\n    depth = 0\n    \n    for char in paren_string:\n        if char == '(':\n            depth += 1\n            current.append(char)\n        elif char == ')':\n            depth -= 1\n            current.append(char)\n            if depth == 0:\n                result.append(''.join(current))\n                current = []\n    \n    return result",
+      "input_tokens": 145,
+      "output_tokens": 94,
+      "error": null
+    }
+  ]
+}

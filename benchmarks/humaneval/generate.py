@@ -41,6 +41,10 @@ from deerflow.config.memory_config import get_memory_config, set_memory_config
 from deerflow.config.paths import get_paths
 from human_eval.data import read_problems, write_jsonl
 
+# Shared benchmark utilities
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from utils import handle_pauseable_error, is_quota_error
+
 MODEL_NAME = "kimi-k2.5"
 
 # Maximum LangGraph recursion limit (controls agent turns)
@@ -76,27 +80,6 @@ def _handle_signal(signum, frame):
 
 
 signal.signal(signal.SIGINT, _handle_signal)
-
-
-def is_quota_error(error: str | Exception) -> bool:
-    """Check if an error indicates API quota/rate limit exhaustion."""
-    msg = str(error).lower()
-    patterns = [
-        "429",
-        "rate limit",
-        "rate_limit",
-        "quota",
-        "insufficient",
-        "billing",
-        "capacity",
-        "overloaded",
-        "too many requests",
-        "resource_exhausted",
-        "tokens exhausted",
-        "account limit",
-        "spending limit",
-    ]
-    return any(p in msg for p in patterns)
 
 
 # ---------------------------------------------------------------------------
@@ -393,48 +376,55 @@ def main():
 
         print(f"[{len(completed_ids)+1}/{len(problem_list)}] {task_id} ...", end=" ", flush=True)
 
-        thread_id = f"humaneval-{task_id.replace('/', '-')}-{uuid.uuid4().hex[:8]}"
+        # Retry loop: pause on network/quota errors, never skip
+        while True:
+            if _interrupted:
+                break
 
-        try:
-            completion, in_tok, out_tok, passed, error = run_agent(
-                client, problem, thread_id, max_recursion=args.max_recursion,
-            )
+            thread_id = f"humaneval-{task_id.replace('/', '-')}-{uuid.uuid4().hex[:8]}"
 
-            if error:
-                if is_quota_error(error):
-                    print(f"\n\nAPI QUOTA EXHAUSTED: {error}")
-                    print("Stopping benchmark. Use --resume to continue after topping up.")
-                    _quota_exhausted = True
-                else:
+            try:
+                completion, in_tok, out_tok, passed, error = run_agent(
+                    client, problem, thread_id, max_recursion=args.max_recursion,
+                )
+
+                if error:
+                    action = handle_pauseable_error(error, context=f"task={task_id}")
+                    if action != "other":
+                        save_checkpoint(output_file, samples, stats)
+                        continue
+
+                if error:
                     print(f"ERROR: {error}", end=" ")
                     stats["errors"] += 1
-            elif passed:
-                print(f"PASS (in={in_tok}, out={out_tok})", end=" ")
-                stats["passed"] += 1
-            else:
-                print(f"FAIL (in={in_tok}, out={out_tok})", end=" ")
-                stats["failed"] += 1
+                elif passed:
+                    print(f"PASS (in={in_tok}, out={out_tok})", end=" ")
+                    stats["passed"] += 1
+                else:
+                    print(f"FAIL (in={in_tok}, out={out_tok})", end=" ")
+                    stats["failed"] += 1
 
-            samples.append({
-                "task_id": task_id,
-                "completion": completion,
-                "passed": passed,
-                "input_tokens": in_tok,
-                "output_tokens": out_tok,
-                "error": error,
-            })
+                samples.append({
+                    "task_id": task_id,
+                    "completion": completion,
+                    "passed": passed,
+                    "input_tokens": in_tok,
+                    "output_tokens": out_tok,
+                    "error": error,
+                })
 
-            completed_ids.add(task_id)
-            stats["total_input_tokens"] += in_tok
-            stats["total_output_tokens"] += out_tok
-            stats["total_tokens"] = stats["total_input_tokens"] + stats["total_output_tokens"]
+                completed_ids.add(task_id)
+                stats["total_input_tokens"] += in_tok
+                stats["total_output_tokens"] += out_tok
+                stats["total_tokens"] = stats["total_input_tokens"] + stats["total_output_tokens"]
+                break  # done with this task, move to next
 
-        except Exception as e:
-            if is_quota_error(e):
-                print(f"\n\nAPI QUOTA EXHAUSTED: {e}")
-                print("Stopping benchmark. Use --resume to continue after topping up.")
-                _quota_exhausted = True
-            else:
+            except Exception as e:
+                action = handle_pauseable_error(e, context=f"task={task_id}")
+                if action != "other":
+                    save_checkpoint(output_file, samples, stats)
+                    continue
+                # other exception — record and move on
                 print(f"FAILED: {e}")
                 stats["errors"] += 1
                 samples.append({
@@ -446,6 +436,7 @@ def main():
                     "error": str(e),
                 })
                 completed_ids.add(task_id)
+                break  # move to next task
 
         # Cleanup workspace
         if args.cleanup:

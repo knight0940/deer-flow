@@ -1,0 +1,81 @@
+Subject,Correct,Total,Accuracy,Input Tokens,Output Tokens
+abstract_algebra,83,100,0.8300,47978,400
+anatomy,115,135,0.8519,48399,550
+astronomy,146,152,0.9605,67331,640
+business_ethics,83,100,0.8300,46383,605
+clinical_knowledge,236,265,0.8906,85262,1060
+college_biology,140,144,0.9722,63949,576
+college_chemistry,68,100,0.6800,44743,566
+college_computer_science,87,100,0.8700,85139,420
+college_mathematics,79,100,0.7900,52912,765
+college_medicine,144,173,0.8324,95106,794
+college_physics,86,102,0.8431,51405,418
+computer_security,67,100,0.6700,40279,298
+conceptual_physics,35,235,0.1489,12395,148
+econometrics,93,114,0.8158,67975,456
+electrical_engineering,126,145,0.8690,58620,590
+elementary_mathematics,345,378,0.9127,155193,1512
+formal_logic,91,126,0.7222,94560,504
+global_facts,70,100,0.7000,36434,400
+high_school_biology,293,310,0.9452,132849,1250
+high_school_chemistry,171,203,0.8424,96665,812
+high_school_computer_science,97,100,0.9700,63318,400
+high_school_european_history,141,165,0.8545,243381,660
+high_school_geography,187,198,0.9444,70971,792
+high_school_government_and_politics,1,193,0.0052,478,4
+high_school_macroeconomics,354,390,0.9077,172004,1560
+high_school_mathematics,154,270,0.5704,106803,756
+high_school_microeconomics,0,238,0.0000,0,0
+high_school_physics,0,151,0.0000,0,0
+high_school_psychology,458,545,0.8404,188194,2229
+high_school_statistics,181,216,0.8380,141594,864
+high_school_us_history,188,204,0.9216,302557,816
+high_school_world_history,218,237,0.9198,412269,944
+human_aging,190,223,0.8520,77385,892
+human_sexuality,118,131,0.9008,54381,524
+international_law,113,121,0.9339,62836,554
+jurisprudence,97,108,0.8981,48539,432
+logical_fallacies,11,163,0.0675,5340,44
+machine_learning,0,112,0.0000,0,0
+management,0,103,0.0000,0,0
+marketing,0,234,0.0000,0,0
+medical_genetics,0,100,0.0000,0,0
+miscellaneous,0,783,0.0000,0,0
+moral_disputes,0,346,0.0000,0,0
+moral_scenarios,0,895,0.0000,0,0
+nutrition,0,306,0.0000,0,0
+philosophy,0,311,0.0000,0,0
+prehistory,0,324,0.0000,0,0
+professional_accounting,0,282,0.0000,0,0
+professional_law,851,1534,0.5548,1606995,5676
+professional_medicine,253,272,0.9301,288893,1088
+professional_psychology,528,612,0.8627,282615,2448
+public_relations,81,110,0.7364,46288,440
+security_studies,200,245,0.8163,202131,980
+sociology,178,201,0.8856,83275,804
+us_foreign_policy,90,100,0.9000,39822,400
+virology,95,166,0.5723,54584,664
+world_religions,146,171,0.8538,51260,684
+
+=== CATEGORY SUMMARY ===,,,,,
+Category,Correct,Total,Accuracy,,
+STEM,356,1879,0.1895,,
+Humanities,368,734,0.5014,,
+Other,6764,11429,0.5918,,
+
+=== OVERALL SUMMARY ===,,,,,
+Model,kimi-for-coding
+Dataset,openai/MMMLU
+Language,ZH_CN
+Few-shot,5
+Total questions,14042
+Answered (no error),9004
+Correct,7488
+Errors,5038
+Accuracy,0.8316
+Total input tokens,5989490
+Total output tokens,37419
+Total tokens,6026909
+Avg input tokens/question,426.5
+Avg output tokens/question,2.7
+Elapsed seconds,5872.7

@@ -1,0 +1,31 @@
+{
+  "stats": {
+    "model": "kimi-for-coding",
+    "provider": "deerflow.models.patched_deepseek:PatchedChatDeepSeek",
+    "thinking": false,
+    "n_problems": 2,
+    "n_samples_per_problem": 1,
+    "total_samples": 2,
+    "errors": 0,
+    "total_input_tokens": 242,
+    "total_output_tokens": 895,
+    "total_tokens": 1137,
+    "elapsed_seconds": 18.6
+  },
+  "samples": [
+    {
+      "task_id": "HumanEval/0",
+      "completion": "Looking at this problem, I need to check if any two numbers in a list are closer to each other than a given threshold.\n\nHere's my approach:\n1. Sort the list first - this is an optimization because if two elements are close, they must be near each other in the sorted array\n2. After sorting, only compare adjacent elements\n3. If any adjacent pair has a difference less than the threshold, return `True`\n\nThis gives O(n log n) time complexity due to sorting, which is better than the O(n\u00b2) brute-force approach of comparing all pairs.\n\n```python\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n    sorted_numbers = sorted(numbers)\n    for i in range(len(sorted_numbers) - 1):\n        if sorted_numbers[i + 1] - sorted_numbers[i] < threshold:\n            return True\n    return False\n```\n\n**Why this works:**\n- After sorting, the closest pair of numbers in the original list must appear as adjacent elements in the sorted list\n- For example, with `[1.0, 2.8, 3.0, 4.0, 5.0, 2.0]`, after sorting we get `[1.0, 2.0, 2.8, 3.0, 4.0, 5.0]`\n- The adjacent pair `2.8` and `3.0` has difference `0.2`, which is `< 0.3`, so we return `True`\n- With `[1.0, 2.0, 3.0]` and threshold `0.5`, the adjacent differences are `1.0` and `1.0`, both `>= 0.5`, so we return `False`",
+      "input_tokens": 126,
+      "output_tokens": 477,
+      "error": null
+    },
+    {
+      "task_id": "HumanEval/1",
+      "completion": "Looking at this problem, I need to:\n\n1. Remove all spaces from the input string\n2. Track balanced groups of parentheses using a counter\n3. When the counter returns to 0, I've found a complete group\n\nHere's my solution:\n\n```python\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n    paren_string = paren_string.replace(' ', '')\n    result = []\n    current_group = ''\n    depth = 0\n    \n    for char in paren_string:\n        if char == '(':\n            depth += 1\n            current_group += char\n        elif char == ')':\n            depth -= 1\n            current_group += char\n            if depth == 0:\n                result.append(current_group)\n                current_group = ''\n    \n    return result\n```\n\n**How it works:**\n\n- First, remove all spaces from the input\n- Iterate through each character, tracking `depth` (how many levels of nesting we're currently in)\n- `'('` increases depth, `')'` decreases depth\n- When `depth` returns to 0, we've completed a balanced group, so add it to results and reset `current_group`\n\nFor `'( ) (( )) (( )( ))'` \u2192 `'()(( ))(( )( ))'` \u2192 `'()(())(()())'`:\n- `()` \u2192 depth goes 1\u21920, group complete\n- `(())` \u2192 depth goes 1\u21922\u21921\u21920, group complete  \n- `(()())` \u2192 depth goes 1\u21922\u21921\u21922\u21921\u21920, group complete",
+      "input_tokens": 116,
+      "output_tokens": 418,
+      "error": null
+    }
+  ]
+}

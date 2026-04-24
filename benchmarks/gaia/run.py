@@ -40,6 +40,10 @@ from deerflow.config import get_app_config
 from deerflow.config.memory_config import get_memory_config, set_memory_config
 from deerflow.config.paths import get_paths
 
+# Shared benchmark utilities
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from utils import handle_pauseable_error, is_quota_error
+
 MODEL_NAME = "kimi-k2.5"
 
 DATASET_NAME = "gaia-benchmark/GAIA"
@@ -59,17 +63,6 @@ def _handle_signal(signum, frame):
 
 
 signal.signal(signal.SIGINT, _handle_signal)
-
-
-def is_quota_error(error: str | Exception) -> bool:
-    msg = str(error).lower()
-    patterns = [
-        "429", "rate limit", "rate_limit", "quota", "insufficient",
-        "billing", "capacity", "overloaded", "too many requests",
-        "resource_exhausted", "tokens exhausted", "account limit",
-        "spending limit",
-    ]
-    return any(p in msg for p in patterns)
 
 
 # ---------------------------------------------------------------------------
@@ -442,54 +435,67 @@ def main():
         level = item.get("Level", "?")
         print(f"[{len(completed_ids)+1}/{len(items)}] L{level} {task_id[:20]} ...", end=" ", flush=True)
 
-        thread_id = f"gaia-{task_id[:20]}-{uuid.uuid4().hex[:8]}"
-
-        try:
-            prediction, in_tok, out_tok, error = run_agent(
-                client, item, thread_id, max_recursion=args.max_recursion,
-            )
-
-            if error and is_quota_error(error):
-                print(f"\n\nAPI QUOTA EXHAUSTED: {error}")
-                print("Stopping benchmark. Use --resume to continue after topping up.")
-                _quota_exhausted = True
+        # Retry loop: pause on network/quota errors, never skip
+        while True:
+            if _interrupted:
                 break
 
-            ground_truth = item.get("Final answer", "")
-            is_correct = score_answer(prediction, ground_truth) if not error else False
+            thread_id = f"gaia-{task_id[:20]}-{uuid.uuid4().hex[:8]}"
 
-            mark = "PASS" if is_correct else "FAIL"
-            err_str = f" err={error[:50]}" if error else ""
-            print(f"{mark} (pred={prediction[:30]}, ans={ground_truth[:30]}, in={in_tok}, out={out_tok}){err_str}")
+            try:
+                prediction, in_tok, out_tok, error = run_agent(
+                    client, item, thread_id, max_recursion=args.max_recursion,
+                )
 
-            results.append({
-                "task_id": task_id,
-                "level": level,
-                "question": item.get("Question", "")[:200],
-                "ground_truth": ground_truth,
-                "prediction": prediction,
-                "correct": is_correct,
-                "input_tokens": in_tok,
-                "output_tokens": out_tok,
-                "error": error,
-            })
+                if error:
+                    action = handle_pauseable_error(error, context=f"task={task_id[:20]}")
+                    if action != "other":
+                        # network or quota — checkpoint and retry same task
+                        save_checkpoint(output_file, results, stats)
+                        if action == "quota":
+                            # For quota, keep retrying until it works
+                            continue
+                        # For network, wait already happened, retry
+                        continue
+                    # other error — record and move on
 
-            if is_correct:
-                stats["correct"] += 1
-            if error:
-                stats["errors"] += 1
+                ground_truth = item.get("Final answer", "")
+                is_correct = score_answer(prediction, ground_truth) if not error else False
 
-            completed_ids.add(task_id)
-            stats["total_input_tokens"] += in_tok
-            stats["total_output_tokens"] += out_tok
-            stats["total_tokens"] = stats["total_input_tokens"] + stats["total_output_tokens"]
+                mark = "PASS" if is_correct else "FAIL"
+                err_str = f" err={error[:50]}" if error else ""
+                print(f"{mark} (pred={prediction[:30]}, ans={ground_truth[:30]}, in={in_tok}, out={out_tok}){err_str}")
 
-        except Exception as e:
-            if is_quota_error(e):
-                print(f"\n\nAPI QUOTA EXHAUSTED: {e}")
-                print("Stopping benchmark. Use --resume to continue after topping up.")
-                _quota_exhausted = True
-            else:
+                results.append({
+                    "task_id": task_id,
+                    "level": level,
+                    "question": item.get("Question", "")[:200],
+                    "ground_truth": ground_truth,
+                    "prediction": prediction,
+                    "correct": is_correct,
+                    "input_tokens": in_tok,
+                    "output_tokens": out_tok,
+                    "error": error,
+                })
+
+                if is_correct:
+                    stats["correct"] += 1
+                if error:
+                    stats["errors"] += 1
+
+                completed_ids.add(task_id)
+                stats["total_input_tokens"] += in_tok
+                stats["total_output_tokens"] += out_tok
+                stats["total_tokens"] = stats["total_input_tokens"] + stats["total_output_tokens"]
+                break  # done with this task, move to next
+
+            except Exception as e:
+                action = handle_pauseable_error(e, context=f"task={task_id[:20]}")
+                if action != "other":
+                    # network or quota — checkpoint and retry
+                    save_checkpoint(output_file, results, stats)
+                    continue
+                # other exception — record and move on
                 print(f"FAILED: {e}")
                 stats["errors"] += 1
                 results.append({
@@ -504,6 +510,7 @@ def main():
                     "error": str(e),
                 })
                 completed_ids.add(task_id)
+                break  # move to next task
 
         # Cleanup
         if args.cleanup:

@@ -43,6 +43,10 @@ from deerflow.config import get_app_config
 from deerflow.config.memory_config import get_memory_config, set_memory_config
 from deerflow.config.paths import get_paths
 
+# Shared benchmark utilities
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from utils import handle_pauseable_error, is_quota_error
+
 MODEL_NAME = "kimi-for-coding"
 
 DATASETS = {
@@ -89,17 +93,6 @@ def _handle_signal(signum, frame):
 
 
 signal.signal(signal.SIGINT, _handle_signal)
-
-
-def is_quota_error(error: str | Exception) -> bool:
-    msg = str(error).lower()
-    patterns = [
-        "429", "rate limit", "rate_limit", "quota", "insufficient",
-        "billing", "capacity", "overloaded", "too many requests",
-        "resource_exhausted", "tokens exhausted", "account limit",
-        "spending limit",
-    ]
-    return any(p in msg for p in patterns)
 
 
 # ---------------------------------------------------------------------------
@@ -395,23 +388,28 @@ def main():
 
         print(f"[{len(completed_ids) + 1}/{len(instances)}] {instance_id} ...", end=" ", flush=True)
 
-        # Use deterministic thread_id for reproducibility + uniqueness suffix
-        thread_id = f"swebench-{instance_id}-{uuid.uuid4().hex[:8]}"
+        # Retry loop: pause on network/quota errors, never skip
+        while True:
+            if _interrupted:
+                break
 
-        try:
-            patch, in_tok, out_tok, error = run_agent(
-                client,
-                instance,
-                thread_id,
-                max_recursion=args.max_recursion,
-            )
+            # Use deterministic thread_id for reproducibility + uniqueness suffix
+            thread_id = f"swebench-{instance_id}-{uuid.uuid4().hex[:8]}"
 
-            if error:
-                if is_quota_error(error):
-                    print(f"\n\nAPI QUOTA EXHAUSTED: {error}")
-                    print("Stopping benchmark. Use --resume to continue after topping up.")
-                    _quota_exhausted = True
-                else:
+            try:
+                patch, in_tok, out_tok, error = run_agent(
+                    client,
+                    instance,
+                    thread_id,
+                    max_recursion=args.max_recursion,
+                )
+
+                if error:
+                    action = handle_pauseable_error(error, context=f"task={instance_id}")
+                    if action != "other":
+                        save_checkpoint(output_file, predictions, stats)
+                        continue
+
                     print(f"ERROR: {error}")
                     stats["errors"] += 1
                     predictions.append({
@@ -423,43 +421,43 @@ def main():
                         "error": str(error),
                         "thread_id": thread_id,
                     })
-            elif not patch.strip():
-                print(f"EMPTY PATCH (in={in_tok}, out={out_tok})")
-                stats["empty_patches"] += 1
-                predictions.append({
-                    "instance_id": instance_id,
-                    "model_patch": "",
-                    "model_name_or_path": args.model,
-                    "input_tokens": in_tok,
-                    "output_tokens": out_tok,
-                    "error": "empty_patch",
-                    "thread_id": thread_id,
-                })
-            else:
-                print(f"OK (in={in_tok}, out={out_tok}, patch={len(patch)} chars)")
-                predictions.append({
-                    "instance_id": instance_id,
-                    "model_patch": patch,
-                    "model_name_or_path": args.model,
-                    "input_tokens": in_tok,
-                    "output_tokens": out_tok,
-                    "error": None,
-                    "thread_id": thread_id,
-                })
+                elif not patch.strip():
+                    print(f"EMPTY PATCH (in={in_tok}, out={out_tok})")
+                    stats["empty_patches"] += 1
+                    predictions.append({
+                        "instance_id": instance_id,
+                        "model_patch": "",
+                        "model_name_or_path": args.model,
+                        "input_tokens": in_tok,
+                        "output_tokens": out_tok,
+                        "error": "empty_patch",
+                        "thread_id": thread_id,
+                    })
+                else:
+                    print(f"OK (in={in_tok}, out={out_tok}, patch={len(patch)} chars)")
+                    predictions.append({
+                        "instance_id": instance_id,
+                        "model_patch": patch,
+                        "model_name_or_path": args.model,
+                        "input_tokens": in_tok,
+                        "output_tokens": out_tok,
+                        "error": None,
+                        "thread_id": thread_id,
+                    })
 
-            if not _quota_exhausted:
                 completed_ids.add(instance_id)
-            stats["completed"] = len(completed_ids)
-            stats["total_input_tokens"] += in_tok
-            stats["total_output_tokens"] += out_tok
-            stats["total_tokens"] = stats["total_input_tokens"] + stats["total_output_tokens"]
+                stats["completed"] = len(completed_ids)
+                stats["total_input_tokens"] += in_tok
+                stats["total_output_tokens"] += out_tok
+                stats["total_tokens"] = stats["total_input_tokens"] + stats["total_output_tokens"]
+                break  # done with this task, move to next
 
-        except Exception as e:
-            if is_quota_error(e):
-                print(f"\n\nAPI QUOTA EXHAUSTED: {e}")
-                print("Stopping benchmark. Use --resume to continue after topping up.")
-                _quota_exhausted = True
-            else:
+            except Exception as e:
+                action = handle_pauseable_error(e, context=f"task={instance_id}")
+                if action != "other":
+                    save_checkpoint(output_file, predictions, stats)
+                    continue
+                # other exception — record and move on
                 print(f"FAILED: {e}")
                 stats["errors"] += 1
                 predictions.append({
@@ -472,6 +470,7 @@ def main():
                     "thread_id": thread_id,
                 })
                 completed_ids.add(instance_id)
+                break  # move to next task
 
         # Cleanup workspace to save disk space
         if args.cleanup:
