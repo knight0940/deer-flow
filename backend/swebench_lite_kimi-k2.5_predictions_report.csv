@@ -1,0 +1,427 @@
+instance_id,resolved,patch_generated,input_tokens,output_tokens,total_tokens,error
+astropy__astropy-12907,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+astropy__astropy-14182,FAIL,YES,8001,2016,10017,
+astropy__astropy-14365,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+astropy__astropy-14995,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+astropy__astropy-6938,FAIL,YES,0,0,0,
+astropy__astropy-7746,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-10914,FAIL,YES,20112,3021,23133,
+django__django-10924,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11001,FAIL,YES,11500,2972,14472,
+django__django-11019,FAIL,NO,0,0,0,empty_patch
+django__django-11039,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11049,FAIL,YES,11057,2779,13836,
+django__django-11099,FAIL,YES,7184,1083,8267,
+django__django-11133,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11179,FAIL,YES,6651,1483,8134,
+django__django-11283,FAIL,YES,13058,1976,15034,
+django__django-11422,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11564,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11583,FAIL,YES,25293,5197,30490,
+django__django-11620,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11630,FAIL,YES,16396,2772,19168,
+django__django-11742,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11797,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11815,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11848,FAIL,YES,20374,5239,25613,
+django__django-11905,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11910,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11964,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-11999,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12113,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12125,FAIL,YES,14870,4565,19435,
+django__django-12184,FAIL,YES,0,0,0,
+django__django-12284,FAIL,YES,8534,2740,11274,
+django__django-12286,FAIL,NO,0,0,0,empty_patch
+django__django-12308,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12453,FAIL,YES,0,0,0,
+django__django-12470,FAIL,YES,14498,2298,16796,
+django__django-12497,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12589,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12700,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12708,FAIL,NO,13716,2437,16153,empty_patch
+django__django-12747,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12856,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-12908,FAIL,NO,13638,4159,17797,empty_patch
+django__django-12915,FAIL,YES,14368,3575,17943,
+django__django-12983,FAIL,YES,0,0,0,
+django__django-13028,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-13033,FAIL,YES,17042,3787,20829,
+django__django-13158,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-13220,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-13230,FAIL,YES,7576,2290,9866,
+django__django-13265,FAIL,NO,8743,2453,11196,empty_patch
+django__django-13315,FAIL,NO,21594,3515,25109,empty_patch
+django__django-13321,FAIL,YES,7960,1641,9601,
+django__django-13401,FAIL,YES,10739,2713,13452,
+django__django-13447,FAIL,NO,0,0,0,empty_patch
+django__django-13448,FAIL,NO,9132,2717,11849,empty_patch
+django__django-13551,FAIL,YES,12106,1956,14062,
+django__django-13590,FAIL,NO,8205,872,9077,empty_patch
+django__django-13658,FAIL,YES,14906,2543,17449,
+django__django-13660,FAIL,YES,0,0,0,
+django__django-13710,FAIL,YES,24237,4892,29129,
+django__django-13757,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-13768,FAIL,YES,0,0,0,
+django__django-13925,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-13933,FAIL,YES,7150,1068,8218,
+django__django-13964,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-14016,FAIL,YES,13355,2279,15634,
+django__django-14017,FAIL,YES,10242,1661,11903,
+django__django-14155,FAIL,YES,23517,5078,28595,
+django__django-14238,FAIL,YES,11184,1761,12945,
+django__django-14382,FAIL,YES,0,0,0,
+django__django-14411,FAIL,YES,6336,721,7057,
+django__django-14534,FAIL,YES,0,0,0,
+django__django-14580,FAIL,YES,18153,6563,24716,
+django__django-14608,FAIL,YES,23677,7561,31238,
+django__django-14667,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-14672,FAIL,YES,2233,893,3126,
+django__django-14730,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-14752,FAIL,YES,26370,4587,30957,
+django__django-14787,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-14855,FAIL,YES,7629,1542,9171,
+django__django-14915,FAIL,NO,0,0,0,empty_patch
+django__django-14997,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-14999,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15061,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15202,FAIL,YES,0,0,0,
+django__django-15213,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15252,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15320,FAIL,YES,0,0,0,
+django__django-15347,FAIL,YES,0,0,0,
+django__django-15388,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15400,FAIL,YES,0,0,0,
+django__django-15498,FAIL,YES,0,0,0,
+django__django-15695,FAIL,NO,0,0,0,empty_patch
+django__django-15738,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15781,FAIL,YES,0,0,0,
+django__django-15789,FAIL,YES,0,0,0,
+django__django-15790,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15814,FAIL,YES,0,0,0,
+django__django-15819,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-15851,FAIL,YES,0,0,0,
+django__django-15902,FAIL,NO,0,0,0,empty_patch
+django__django-15996,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-16041,FAIL,NO,0,0,0,empty_patch
+django__django-16046,FAIL,YES,0,0,0,
+django__django-16139,FAIL,YES,0,0,0,
+django__django-16229,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-16255,FAIL,YES,0,0,0,
+django__django-16379,FAIL,YES,0,0,0,
+django__django-16400,FAIL,YES,0,0,0,
+django__django-16408,FAIL,NO,0,0,0,empty_patch
+django__django-16527,FAIL,YES,0,0,0,
+django__django-16595,FAIL,YES,0,0,0,
+django__django-16816,FAIL,NO,0,0,0,empty_patch
+django__django-16820,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-16873,FAIL,YES,0,0,0,
+django__django-16910,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+django__django-17051,FAIL,NO,0,0,0,empty_patch
+django__django-17087,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+matplotlib__matplotlib-18869,FAIL,YES,0,0,0,
+matplotlib__matplotlib-22711,FAIL,YES,0,0,0,
+matplotlib__matplotlib-22835,FAIL,YES,0,0,0,
+matplotlib__matplotlib-23299,FAIL,NO,0,0,0,empty_patch
+matplotlib__matplotlib-23314,FAIL,NO,0,0,0,empty_patch
+matplotlib__matplotlib-23476,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+matplotlib__matplotlib-23562,FAIL,YES,0,0,0,
+matplotlib__matplotlib-23563,FAIL,YES,0,0,0,
+matplotlib__matplotlib-23913,FAIL,NO,0,0,0,empty_patch
+matplotlib__matplotlib-23964,FAIL,YES,0,0,0,
+matplotlib__matplotlib-23987,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+matplotlib__matplotlib-24149,FAIL,YES,0,0,0,
+matplotlib__matplotlib-24265,FAIL,YES,0,0,0,
+matplotlib__matplotlib-24334,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+matplotlib__matplotlib-24970,FAIL,YES,0,0,0,
+matplotlib__matplotlib-25079,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+matplotlib__matplotlib-25311,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+matplotlib__matplotlib-25332,FAIL,YES,0,0,0,
+matplotlib__matplotlib-25433,FAIL,NO,0,0,0,empty_patch
+matplotlib__matplotlib-25442,FAIL,YES,0,0,0,
+matplotlib__matplotlib-25498,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+matplotlib__matplotlib-26011,FAIL,NO,0,0,0,empty_patch
+matplotlib__matplotlib-26020,FAIL,YES,0,0,0,
+mwaskom__seaborn-2848,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+mwaskom__seaborn-3010,FAIL,YES,0,0,0,
+mwaskom__seaborn-3190,FAIL,YES,0,0,0,
+mwaskom__seaborn-3407,FAIL,NO,0,0,0,empty_patch
+pallets__flask-4045,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pallets__flask-4992,FAIL,YES,0,0,0,
+pallets__flask-5063,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+psf__requests-1963,FAIL,YES,0,0,0,
+psf__requests-2148,FAIL,YES,0,0,0,
+psf__requests-2317,FAIL,YES,0,0,0,
+psf__requests-2674,FAIL,YES,0,0,0,
+psf__requests-3362,FAIL,YES,0,0,0,
+psf__requests-863,FAIL,YES,0,0,0,
+pydata__xarray-3364,FAIL,NO,0,0,0,empty_patch
+pydata__xarray-4094,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pydata__xarray-4248,FAIL,NO,0,0,0,empty_patch
+pydata__xarray-4493,FAIL,NO,0,0,0,empty_patch
+pydata__xarray-5131,FAIL,YES,0,0,0,
+pylint-dev__pylint-5859,FAIL,YES,0,0,0,
+pylint-dev__pylint-6506,FAIL,YES,0,0,0,
+pylint-dev__pylint-7080,FAIL,YES,0,0,0,
+pylint-dev__pylint-7114,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pylint-dev__pylint-7228,FAIL,YES,0,0,0,
+pylint-dev__pylint-7993,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pytest-dev__pytest-11143,FAIL,YES,0,0,0,
+pytest-dev__pytest-11148,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pytest-dev__pytest-5103,FAIL,YES,0,0,0,
+pytest-dev__pytest-5221,FAIL,YES,0,0,0,
+pytest-dev__pytest-5227,FAIL,YES,0,0,0,
+pytest-dev__pytest-5413,FAIL,YES,0,0,0,
+pytest-dev__pytest-5495,FAIL,YES,0,0,0,
+pytest-dev__pytest-5692,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pytest-dev__pytest-6116,FAIL,YES,0,0,0,
+pytest-dev__pytest-7168,FAIL,YES,0,0,0,
+pytest-dev__pytest-7220,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pytest-dev__pytest-7373,FAIL,YES,0,0,0,
+pytest-dev__pytest-7432,FAIL,YES,0,0,0,
+pytest-dev__pytest-7490,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pytest-dev__pytest-8365,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+pytest-dev__pytest-8906,FAIL,YES,0,0,0,
+pytest-dev__pytest-9359,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+scikit-learn__scikit-learn-10297,FAIL,NO,0,0,0,empty_patch
+scikit-learn__scikit-learn-10508,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-10949,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-11040,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-11281,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+scikit-learn__scikit-learn-12471,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-13142,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+scikit-learn__scikit-learn-13241,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+scikit-learn__scikit-learn-13439,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-13496,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-13497,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+scikit-learn__scikit-learn-13584,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-13779,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-14087,FAIL,NO,0,0,0,empty_patch
+scikit-learn__scikit-learn-14092,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-14894,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-14983,FAIL,NO,0,0,0,empty_patch
+scikit-learn__scikit-learn-15512,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+scikit-learn__scikit-learn-15535,FAIL,NO,0,0,0,"workspace setup failed: Command '['git', 'clone', 'https://github.com/scikit-learn/scikit-learn.git', '.']' timed out after 300 seconds"
+scikit-learn__scikit-learn-25500,FAIL,NO,0,0,0,"workspace setup failed: git clone failed: Cloning into '.'...
+error: RPC failed; curl 56 Recv failure: Connection reset by peer
+error: 8 bytes of body are still expected
+fatal: expected flush after ref listing
+"
+scikit-learn__scikit-learn-25570,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-25638,FAIL,YES,0,0,0,
+scikit-learn__scikit-learn-25747,FAIL,YES,0,0,0,
+sphinx-doc__sphinx-10325,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-10451,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-11445,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-7686,FAIL,YES,0,0,0,
+sphinx-doc__sphinx-7738,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-7975,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-8273,FAIL,YES,0,0,0,
+sphinx-doc__sphinx-8282,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-8435,FAIL,NO,0,0,0,empty_patch
+sphinx-doc__sphinx-8474,FAIL,NO,0,0,0,empty_patch
+sphinx-doc__sphinx-8506,FAIL,NO,0,0,0,empty_patch
+sphinx-doc__sphinx-8595,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-8627,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sphinx-doc__sphinx-8713,FAIL,YES,0,0,0,
+sphinx-doc__sphinx-8721,FAIL,YES,0,0,0,
+sphinx-doc__sphinx-8801,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-11400,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-11870,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-11897,FAIL,YES,0,0,0,
+sympy__sympy-12171,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-12236,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-12419,FAIL,YES,0,0,0,
+sympy__sympy-12454,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-12481,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-13031,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-13043,FAIL,YES,0,0,0,
+sympy__sympy-13146,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-13177,FAIL,YES,0,0,0,
+sympy__sympy-13437,FAIL,YES,0,0,0,
+sympy__sympy-13471,FAIL,YES,0,0,0,
+sympy__sympy-13480,FAIL,YES,0,0,0,
+sympy__sympy-13647,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-13773,FAIL,YES,0,0,0,
+sympy__sympy-13895,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-13915,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-13971,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-14024,FAIL,YES,0,0,0,
+sympy__sympy-14308,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-14317,FAIL,YES,0,0,0,
+sympy__sympy-14396,FAIL,YES,0,0,0,
+sympy__sympy-14774,FAIL,YES,0,0,0,
+sympy__sympy-14817,FAIL,YES,0,0,0,
+sympy__sympy-15011,FAIL,YES,0,0,0,
+sympy__sympy-15308,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-15345,FAIL,YES,0,0,0,
+sympy__sympy-15346,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-15609,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-15678,FAIL,YES,0,0,0,
+sympy__sympy-16106,FAIL,YES,0,0,0,
+sympy__sympy-16281,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-16503,FAIL,YES,0,0,0,
+sympy__sympy-16792,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-16988,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-17022,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-17139,FAIL,YES,0,0,0,
+sympy__sympy-17630,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-17655,FAIL,YES,0,0,0,
+sympy__sympy-18057,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-18087,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-18189,FAIL,YES,0,0,0,
+sympy__sympy-18199,FAIL,YES,0,0,0,
+sympy__sympy-18532,FAIL,YES,0,0,0,
+sympy__sympy-18621,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-18698,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-18835,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-19007,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-19254,FAIL,YES,0,0,0,
+sympy__sympy-19487,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-20049,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-20154,FAIL,YES,0,0,0,
+sympy__sympy-20212,FAIL,YES,0,0,0,
+sympy__sympy-20322,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-20442,FAIL,YES,0,0,0,
+sympy__sympy-20590,FAIL,YES,0,0,0,
+sympy__sympy-20639,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-21055,FAIL,YES,0,0,0,
+sympy__sympy-21171,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-21379,FAIL,YES,0,0,0,
+sympy__sympy-21612,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-21614,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-21627,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-21847,FAIL,NO,0,0,0,empty_patch
+sympy__sympy-22005,FAIL,YES,0,0,0,
+sympy__sympy-22714,FAIL,YES,0,0,0,
+sympy__sympy-22840,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-23117,FAIL,YES,0,0,0,
+sympy__sympy-23191,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-23262,FAIL,NO,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-24066,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-24102,FAIL,YES,0,0,0,
+sympy__sympy-24152,FAIL,YES,0,0,0,
+sympy__sympy-24213,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+sympy__sympy-24909,FAIL,YES,0,0,0,"agent error: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+
+=== SUMMARY ===,,,,,,
+Dataset,princeton-nlp/SWE-bench_Lite
+Total instances,300
+Patches generated,224
+Resolved,0
+Resolve rate,0.0000
+Total input tokens,511336
+Total output tokens,111405
+Total tokens,622741
+Avg input tokens/instance,1704.5
+Avg output tokens/instance,371.4
